@@ -35,8 +35,6 @@ Firebase Firestore Rules:
 Ensure your Firestore rules are configured to allow access only to authenticated users.
 
 
-service cloud.firestore {
-  match /databases/{database}/documents {
     
     // Match all documents in the 'users' collection
     match /users/{userId} {
@@ -49,6 +47,3 @@ service cloud.firestore {
         allow read, write: if request.auth != null && request.auth.uid == userId;
       }
     }
-  }
-}
-
