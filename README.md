@@ -33,6 +33,8 @@ Firebase setup involves enabling Firebase Authentication for email/password sign
 
 Firebase Firestore Rules:
 Ensure your Firestore rules are configured to allow access only to authenticated users.
+
+
 service cloud.firestore {
   match /databases/{database}/documents {
     
